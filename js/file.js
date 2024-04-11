@@ -2,20 +2,20 @@ const lista_cursos=[]
 lista_cursos.push({
     titulo: 'boton',
     texto: 'Curso Uno',
-    imagen: "./imagenes/Captura.PNG",
-    enlace: './fileHtml/sustantivos.html',
+    imagen: "imagenes/Captura.PNG",
+    enlace: 'fileHtml/sustantivos.html',
 });
 lista_cursos.push({
     titulo: 'Flask',
     texto: 'Curso Dos',
-    imagen: "./imagenes/Captura.PNG",
-    enlace: './fileHtml/verbos.html'
+    imagen: "imagenes/Captura.PNG",
+    enlace: 'fileHtml/verbos.html'
 });
 lista_cursos.push({
     titulo: 'boton',
     texto: 'Curso Tres',
-    imagen: "./imagenes/Captura.PNG",
-    enlace: './fileHtml/correlativos.html'
+    imagen: "imagenes/Captura.PNG",
+    enlace: 'fileHtml/correlativos.html'
 });
 lista_cursos.push({
     titulo: 'Flask',
