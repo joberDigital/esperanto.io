@@ -1,100 +1,4 @@
-
-const container = document.createElement('div');
-const seccion1Botones = document.createElement('div');
-const seccion1 = document.createElement('div');
-const seccion2 = document.createElement('div');
-
-
-const  botonInput= document.createElement('input');
-const  botonClick= document.createElement('div');
-
-const botonSpace = document.createElement('div');
-const fieldset = document.createElement('fieldset');
-const form = document.createElement('form');
-const legendInicio = document.createElement('legend');
-const legendFinal = document.createElement('legend');
-
-const  pasado= document.createElement('div');
-const  presente= document.createElement('div');
-const  futuro= document.createElement('div');
-
-legendInicio.classList.add('Form-legend');
-legendFinal.classList.add('Form-legend');
-
-
-botonClick.innerText="Conjugacion"
-pasado.innerText="pasado"
-presente.innerText="presente"
-futuro.innerText="futuro"
-legendInicio.innerText="ESPERANTO"
-legendFinal.innerText="Solo letras minúsculas y sin acentos..."
- botonInput.classList.add('emailInput')
- botonClick.classList.add('submit')
-
-form.classList.add('contactoForm');
-seccion1Botones.classList.add('seccion1Botones')
-container.classList.add('card');
- pasado.classList.add('botones')
- presente.classList.add('botones')
- futuro.classList.add('botones')
- botonSpace.classList.add('botonSpace')
-
- seccion1.classList.add("seccion1")
-
- seccion2.appendChild(botonInput)
-
- fieldset.appendChild(botonSpace)
- fieldset.appendChild(botonClick)
-seccion1.appendChild(pasado);
-seccion1.appendChild(presente);
-seccion1.appendChild(futuro);
-fieldset.appendChild(legendInicio);
-fieldset.appendChild(seccion1);
-
-form.appendChild(fieldset);
-seccion1Botones.appendChild(form)
-container.appendChild(seccion1Botones);
-fieldset.appendChild(seccion2)
-fieldset.appendChild(legendFinal);
-const contenedor = document.querySelector('#headerPrincipal');
-contenedor.appendChild(container);
-
-var Infinitivo
-function tiempoInfinitivo() {
-    entradaVerbo= botonInput.value;
-    if (verbosArray[entradaVerbo]) {
-    botonSpace.style.display="block"
-    console.log(verbosArray[entradaVerbo])
-    botonSpace.innerText=verbosArray[entradaVerbo];
-   console.log("text : "+verbosArray[entradaVerbo])
-   return Infinitivo=verbosArray[entradaVerbo].slice(0,-1);
-
-  }
-// verboU=botonSpace.innerText
-   botonInput.focus();
-   botonInput.value=""
-
-}
-function tiempoPasado() {
-let verboPasado=Infinitivo.concat("is")
-console.log("verbo : "+verboPasado)
-botonSpace.innerHTML=verboPasado
-}
-function tiempoPresente() {
-    let verboPasado=Infinitivo.concat("as")
-    console.log("verbo : "+verboPasado)
-    botonSpace.innerHTML=verboPasado
-    }
-    function tiempoFuturo() {
-        let verboPasado=Infinitivo.concat("os")
-        console.log("verbo : "+verboPasado)
-        botonSpace.innerHTML=verboPasado
-        }
-
-botonClick.onclick=tiempoInfinitivo;
-pasado.onclick=tiempoPasado;
-presente.onclick=tiempoPresente;
-futuro.onclick=tiempoFuturo;
+var Infinitivo=null;
 const verbosArray={
   comprar:'aĉeti',
   volar:'flugi',
@@ -269,3 +173,97 @@ recomendar:'ekomendi' ,
   esconder:        'kaŝi',
   anunciar:'anonci' 
 }    
+const container = document.createElement('div');
+const seccion1Botones = document.createElement('div');
+const seccion1 = document.createElement('div');
+const seccion2 = document.createElement('div');
+
+
+const  botonInput= document.createElement('input');
+const  botonClick= document.createElement('div');
+
+const botonSpace = document.createElement('div');
+const fieldset = document.createElement('fieldset');
+const form = document.createElement('form');
+const legendInicio = document.createElement('legend');
+const legendFinal = document.createElement('legend');
+
+const  pasado= document.createElement('div');
+const  presente= document.createElement('div');
+const  futuro= document.createElement('div');
+
+legendInicio.classList.add('Form-legend');
+legendFinal.classList.add('Form-legend');
+
+botonSpace.innerText="Infinitivo"
+botonClick.innerText="Conjugacion"
+pasado.innerText="pasado"
+presente.innerText="presente"
+futuro.innerText="futuro"
+legendInicio.innerText="ESPERANTO"
+legendFinal.innerText="Solo letras minúsculas y sin acentos..."
+ botonInput.classList.add('emailInput')
+ botonClick.classList.add('submit')
+
+form.classList.add('contactoForm');
+seccion1Botones.classList.add('seccion1Botones')
+container.classList.add('card');
+ pasado.classList.add('botones')
+ presente.classList.add('botones')
+ futuro.classList.add('botones')
+ botonSpace.classList.add('botonSpace')
+
+ seccion1.classList.add("seccion1")
+
+ seccion2.appendChild(botonInput)
+
+ fieldset.appendChild(botonSpace)
+ fieldset.appendChild(botonClick)
+seccion1.appendChild(pasado);
+seccion1.appendChild(presente);
+seccion1.appendChild(futuro);
+fieldset.appendChild(legendInicio);
+fieldset.appendChild(seccion1);
+
+form.appendChild(fieldset);
+seccion1Botones.appendChild(form)
+container.appendChild(seccion1Botones);
+fieldset.appendChild(seccion2)
+fieldset.appendChild(legendFinal);
+const contenedor = document.querySelector('#headerPrincipal');
+contenedor.appendChild(container);
+
+function tiempoInfinitivo() {
+    entradaVerbo= botonInput.value;
+    if (verbosArray[entradaVerbo]) {
+    console.log(verbosArray[entradaVerbo])
+    botonSpace.innerText=verbosArray[entradaVerbo];
+//   console.log("text : "+verbosArray[entradaVerbo])
+   Infinitivo=verbosArray[entradaVerbo].slice(0,-1);
+   return Infinitivo
+  }
+// verboU=botonSpace.innerText
+   botonInput.focus();
+   botonInput.value=""
+
+}
+function tiempoPasado() {
+let verboPasado=Infinitivo.concat("is")
+console.log("verbo : "+verboPasado)
+return botonSpace.innerHTML=verboPasado
+}
+function tiempoPresente() {
+    let verboPasado=Infinitivo.concat("as")
+    console.log("verbo : "+verboPasado)
+    return botonSpace.innerHTML=verboPasado
+    }
+    function tiempoFuturo() {
+        let verboPasado=Infinitivo.concat("os")
+        console.log("verbo : "+verboPasado)
+        return botonSpace.innerHTML=verboPasado
+        }
+
+botonClick.onclick=tiempoInfinitivo;
+pasado.onclick=tiempoPasado;
+presente.onclick=tiempoPresente;
+futuro.onclick=tiempoFuturo;

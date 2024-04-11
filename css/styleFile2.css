@@ -112,7 +112,6 @@ img {
   color: white;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  display: none;
 }
 .emailInput {
   width: 80%;
@@ -136,6 +135,7 @@ img {
   margin: 5px 50px;
   padding: 5px;
   font-size: 20px;
+;
 }
 .contactoForm {
   width: 100%;
@@ -149,9 +149,7 @@ img {
   margin: 5px 50px;
   width: 60%;
 }
-tr,
-th,
-u {
+tr,th,u {
   /* background-color: #81a6ca; */
   padding: 20px;
   color: #252571;
@@ -287,13 +285,6 @@ u {
   width: 400px;
   line-height: 2.2;
 }
-.card-header {
-}
-.list-group {
-}
-.list-group-flush {
-}
-
 .table2 {
   text-shadow: 2px 2px 3px white;
   margin: 0% 5%;
@@ -330,7 +321,7 @@ u {
       center center/350px 50px,
     rgb(22, 220, 124);
   position: absolute;
-  top: 650px;
+  top: 750px;
   left: 30px;
   backface-visibility: hidden;
   overflow: hidden;
