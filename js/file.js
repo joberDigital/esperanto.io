@@ -20,14 +20,14 @@ lista_cursos.push({
 lista_cursos.push({
     titulo: 'Flask',
     texto: 'Curso Cuatro',
-    imagen: "./imagenes/Captura.PNG",
-    enlace: './fileHtml/preposiciones.html'
+    imagen: "imagenes/Captura.PNG",
+    enlace: 'fileHtml/preposiciones.html'
 });
 lista_cursos.push({
     titulo: 'Flask',
     texto: 'Curso Cinco',
-    imagen: "./imagenes/Captura.PNG",
-    enlace: './fileHtml/adjetivos.html'
+    imagen: "imagenes/Captura.PNG",
+    enlace: 'fileHtml/adjetivos.html'
 });
 lista_cursos.push({
     titulo: 'pronombres',

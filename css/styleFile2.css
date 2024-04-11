@@ -22,7 +22,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 21%;
-  background: url('/imagenes/Captura.PNG') no-repeat;
+  background: url('../imagenes/Captura.PNG') no-repeat;
   margin: 20px;
 }
 .headerPrincipal-titulo {
