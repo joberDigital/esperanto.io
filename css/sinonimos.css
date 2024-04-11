@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  border-radius: 5%;
+}
+#container {
+  width: auto;
+  margin: 10px 50px;
+}
+.card {
+  width: 500px;
+  border: 1px solid rgb(10, 2, 44);
+  font-size: 50px;
+  text-align: center;
+  border: groove 5px blue;
+  border-radius: 5%;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 50px;
+  justify-content: space-around;
+}
+.card2 {
+  margin: 10px 30px;
+  backdrop-filter: invert(20%);
+  background: transparent;
+  border-radius: 5%;
+  border: groove 5px blue;
+}
+.img-fluid {
+  border: groove 5px blue;
+  width: 400px;
+  height: 250px;
+  margin-top: 20px;
+}
+.mb-3 {
+  border: groove 5px blue;
+}
+.card-body {
+  padding: 10px;
+  margin: 10px;
+  height: auto;
+  width: auto;
+  border: groove 5px blue;
+  border-radius: 3%;
+}
+.card-text {
+  border: groove 5px blue;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: blue;
+  color: white;
+  border-radius: 20px;
+  width: 350px;
+  margin: 10px auto;
+}
+.btn {
+  background-color: blue;
+  border: solid 2px black;
+  border-radius: 10px;
+}
+.btn-primary {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+  padding: 0px 20px 0px 20px;
+  width: auto;
+}
+
+@media (max-width: 414px) {
+  .row {
+    font-size: 40px;
+  }
+  .card {
+    font-size: 30px;
+    border-right: inset;
+    border-bottom: inset;
+    backdrop-filter: blur(50%);
+    background: transparent;
+  }
+}
