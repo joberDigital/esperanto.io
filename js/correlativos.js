@@ -1,4 +1,3 @@
-//const th5front=document.createElement('th');
 import checkComplete from './modulos/correlativosModule.js';
 
 const front = document.createElement("th");
@@ -66,18 +65,7 @@ th2.classList.add("th");
 th3.classList.add("th");
 th4.classList.add("th");
 th5.classList.add("th");
-
 //---------------------------------------//
-//---------------------------------------//
-//---------------------------------------//
-
-//front.classList.add('front')
-//th5front.classList.add('form__container') //kia
-
-//---------------------------------------//
-//---------------------------------------//
-//---------------------------------------//
-
 th6.classList.add("th");
 
 tr.classList.add("tr");
@@ -115,31 +103,6 @@ td24Fila5.setAttribute("class", "td front");
 td25Fila5.setAttribute("class", "td front");
 td26Fila5.setAttribute("class", "td front");
 
-//  td3Fila1.classList.add('td')
-//  td4Fila1.classList.add('td')
-//  td5Fila1.classList.add('td')
-//  td6Fila1.classList.add('td')
-//  td7Fila2.classList.add('td')
-//  td8Fila2.classList.add('td')
-//  td9Fila2.classList.add('td')
-// td10Fila2.classList.add('td')
-// td11Fila2.classList.add('td')
-// td12Fila3.classList.add('td')
-// td13Fila3.classList.add('td')
-// td14Fila3.classList.add('td')
-// td15Fila3.classList.add('td')
-// td16Fila3.classList.add('td')
-// td17Fila4.classList.add('td')
-// td18Fila4.classList.add('td')
-// td19Fila4.classList.add('td')
-// td20Fila4.classList.add('td')
-// td21Fila4.classList.add('td')
-// td22Fila5.classList.add('td')
-// td23Fila5.classList.add('td')
-// td24Fila5.classList.add('td')
-// td25Fila5.classList.add('td')
-// td26Fila5.classList.add('td')
-
 th.innerText = "CORRELATIVOS";
 th2.innerText = "~~ A ~~";
 th3.innerText = "~~ E ~~";
@@ -154,7 +117,6 @@ th9.innerText = "~~ I ~~";
 th10.innerText = "~~ NENI ~~";
 th11.innerText = "~~ CXI ~~";
 
-//td2Fila1.innerText="Que tipo";
 td2Fila1.innerText = "Que tipo";
 td3Fila1.innerText = "Que lugar";
 td4Fila1.innerText = "Que cosa";
@@ -239,7 +201,6 @@ container.appendChild(table2);
 td3Fila1.onclick = (event)=> {
    
   td3Fila1.removeAttribute("td front");
-//  td3Fila1.classList.toggle('td','front')
 setTimeout(()=>{
   const   element=event.target;
   element.classList.toggle('back')?
