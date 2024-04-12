@@ -172,12 +172,14 @@ const verbosArray = {
   esconder: "kaŝi",
   anunciar: "anonci",
 };
+var botonInput =document.getElementById('botonInput')
+
 const container = document.createElement("div");
 const seccion1Botones = document.createElement("div");
 const seccion1 = document.createElement("div");
 const seccion2 = document.createElement("div");
 
-const botonInput = document.createElement("input");
+//const botonInput = document.createElement("input");
 const botonClick = document.createElement("div");
 
 const botonSpace = document.createElement("div");
@@ -199,7 +201,7 @@ presente.innerText = "presente";
 futuro.innerText = "futuro";
 legendInicio.innerText = "ESPERANTO";
 legendFinal.innerText = "Solo letras minúsculas y sin acentos...";
-botonInput.classList.add("emailInput");
+//botonInput.classList.add("emailInput");
 botonClick.classList.add("submit");
 
 form.classList.add("contactoForm");
@@ -253,9 +255,9 @@ function tiempoPresente() {
   botonSpace.innerHTML = verboPasado;
 }
 function tiempoFuturo() {
-  let verboPasado = Infinitivo.concat("os");
-  console.log("verbo : " + verboPasado);
-  botonSpace.innerHTML = verboPasado;
+  // let verboPasado = Infinitivo.concat("os");
+  // console.log("verbo : " + verboPasado);
+  botonSpace.innerHTML = botonInput.value;
 }
 
 botonClick.onclick = tiempoInfinitivo;
