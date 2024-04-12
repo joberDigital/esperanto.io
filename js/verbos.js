@@ -1,4 +1,3 @@
-var Infinitivo = null;
 const verbosArray = {
   comprar: "aĉeti",
   volar: "flugi",
