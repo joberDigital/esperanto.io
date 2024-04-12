@@ -230,7 +230,8 @@ contenedor.appendChild(container);
 var Infinitivo;
 var entradaVerbo = botonInput.value
 function tiempoInfinitivo(entradaVerbo) {
-   entradaVerbo = botonInput.value;
+alert("memoru...\n\nunua letero\ndevenda minuskla")
+  entradaVerbo = botonInput.value;
   if (verbosArray[entradaVerbo]) {
     console.log(verbosArray[entradaVerbo]);
     botonSpace.innerHTML = verbosArray[entradaVerbo];
