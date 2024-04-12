@@ -19,7 +19,8 @@ const verbosArray = {
   hornear: "kuiri",
   atrapar: "kapti",
   esperar: "atendi",
-aprender: "lerni",
+  "tocar un instrumento": "ludi",
+  aprender: "lerni",
   escribir: "skribi",
   comprender: "kompreni",
   aceptar: "akcepti",
@@ -46,28 +47,13 @@ aprender: "lerni",
   hablar: "paroli",
   platicar: "paroli",
   curar: "kuraci",
-//  "escribir una obra literaria": "verki",
-//  "tomar fotos": "foti",
-//   "pintar un cuadro": "pentri",
-//   "andar en bicicleta": "bicikli",
-//  "tocar un instrumento": "ludi",
-// "tomar nota": "noti",
-// "dar a luz": "naski",
-// "estar sin": "sati",
-// "tener sed": "soifi",
-// "encontrarse con alguien": "renkonti",
-// "viajar en": "veturi",
-// "enviar por": "faksi",
-// "tener razón": "pravi",
-// "tener derecho": "rajti",
-// "hablar de un tema": "temi",
-// "estar de": "farti",
-// "tener esperanza": "esperi",
-// "estar seguro": "certi",
-
+  "escribir una obra literaria": "verki",
+  "tomar fotos": "foti",
   caer: "fali",
+  "pintar un cuadro": "pentri",
   poner: "meti",
   escuchar: "aŭskulti",
+  "andar en bicicleta": "bicikli",
   telefonear: "telefoni",
   intentar: "provi",
   dormir: "dormi",
@@ -76,19 +62,23 @@ aprender: "lerni",
   nadar: "naĝi",
   responder: "respondi",
   hacer: "fari",
-  oir: "aŭdi",
+  oír: "aŭdi",
   observar: "rigardi",
   saludar: "saluti",
+  "estar de": "farti",
   agradecer: " danki",
   desear: "deziri",
   pedir: "peti",
   creer: "kredi",
   olvidar: "forgesi",
   viajar: "vojaĝi",
+  "hablar de un tema": "temi",
   reír: "ridi",
   decir: "diri",
+  "tener esperanza": "esperi",
   caer: "fali",
   buscar: "serĉi",
+  "estar seguro": "certi",
   funcionar: "funkcii",
   invitar: "inviti",
   cantar: "kanti",
@@ -97,6 +87,7 @@ aprender: "lerni",
   preocupar: "zorgi",
   encontrar: "trovi",
   saber: "scii",
+  "tener derecho": "rajti",
   costar: "kosti",
   aparecer: "aperi",
   vencer: "venki",
@@ -105,6 +96,7 @@ aprender: "lerni",
   gritar: "krii",
   llorar: "plori",
   perdonar: "pardoni",
+  "tener razón": "pravi",
   festejar: "festi",
   bailar: " danci",
   asombrarse: "miri",
@@ -123,6 +115,8 @@ aprender: "lerni",
   calcular: "kalkuli",
   computar: "komputi",
   tejer: "teksi",
+  "viajar en": "veturi",
+  "enviar por": "faksi",
   platicar: "babili",
   entretener: "amuzi",
   dudar: "dubi",
@@ -131,6 +125,9 @@ aprender: "lerni",
   castigar: "puni",
   parecer: "ŝajni",
   robar: "ŝteli",
+  "estar sin": "sati",
+  "tener sed": "soifi",
+  "encontrarse con alguien": "renkonti",
   conocer: "koni",
   quemar: "bruli",
   elegir: "elekti",
@@ -156,12 +153,14 @@ aprender: "lerni",
   gobernar: "regi",
   peinar: "kombi",
   cesar: "ĉesi",
+  "dar a luz": "naski",
   nacer: "naskiĝi",
   suponer: "supozi",
   recomendar: "ekomendi",
   prometer: "promesi",
   defender: "defendi",
   contratar: "dungi",
+  "tomar nota": "noti",
   ocupar: "okupi",
   sufrir: "suferi",
   bañar: "bani",
@@ -173,14 +172,12 @@ aprender: "lerni",
   esconder: "kaŝi",
   anunciar: "anonci",
 };
-var botonInput =document.getElementById('botonInput')
-
 const container = document.createElement("div");
 const seccion1Botones = document.createElement("div");
 const seccion1 = document.createElement("div");
 const seccion2 = document.createElement("div");
 
-//const botonInput = document.createElement("input");
+const botonInput = document.createElement("input");
 const botonClick = document.createElement("div");
 
 const botonSpace = document.createElement("div");
@@ -202,7 +199,7 @@ presente.innerText = "presente";
 futuro.innerText = "futuro";
 legendInicio.innerText = "ESPERANTO";
 legendFinal.innerText = "Solo letras minúsculas y sin acentos...";
-//botonInput.classList.add("emailInput");
+botonInput.classList.add("emailInput");
 botonClick.classList.add("submit");
 
 form.classList.add("contactoForm");
@@ -231,37 +228,37 @@ fieldset.appendChild(legendFinal);
 const contenedor = document.querySelector("#headerPrincipal");
 contenedor.appendChild(container);
 var Infinitivo;
-//var entradaVerbo = botonInput.value;
-function tiempoInfinitivo(entradaVerbo) {
+var entradaVerbo = botonInput.value;
+function tiempoInfinitivo() {
    entradaVerbo = botonInput.value;
   if (verbosArray[entradaVerbo]) {
-    //console.log(verbosArray[entradaVerbo]);
+    console.log(verbosArray[entradaVerbo]);
     botonSpace.innerHTML = verbosArray[entradaVerbo];
-//    Infinitivo = verbosArray[entradaVerbo].slice(0, -1);
-  //  return Infinitivo;
+    //   console.log("text : "+verbosArray[entradaVerbo])
+    Infinitivo = verbosArray[entradaVerbo].slice(0, -1);
+    return Infinitivo;
   }
   // verboU=botonSpace.innerText
   botonInput.focus();
   botonInput.value = "";
 }
-// function tiempoPasado() {
-//   let verboPasado = Infinitivo.concat("is");
-//   console.log("verbo : " + verboPasado);
-//   botonSpace.innerHTML = verboPasado;
-// }
+function tiempoPasado() {
+  let verboPasado = Infinitivo.concat("is");
+  console.log("verbo : " + verboPasado);
+  botonSpace.innerHTML = verboPasado;
+}
 function tiempoPresente() {
-  // let verboPasado = Infinitivo.concat("as");
-  // console.log("verbo : " + verboPasado);
-  botonSpace.innerHTML = verbosArray.ver;
-  //verboPasado;
+  let verboPasado = Infinitivo.concat("as");
+  console.log("verbo : " + verboPasado);
+  botonSpace.innerHTML = verboPasado;
 }
 function tiempoFuturo() {
-  // let verboPasado = Infinitivo.concat("os");
-  // console.log("verbo : " + verboPasado);
-  botonSpace.innerHTML = verbosArray.ver;
-//  botonSpace.innerHTML = verboPasado;
+  let verboPasado = Infinitivo.concat("os");
+  console.log("verbo : " + verboPasado);
+  botonSpace.innerHTML = verboPasado;
 }
+
 botonClick.onclick = tiempoInfinitivo;
-//pasado.onclick = tiempoPasado;
+pasado.onclick = tiempoPasado;
 presente.onclick = tiempoPresente;
 futuro.onclick = tiempoFuturo;
