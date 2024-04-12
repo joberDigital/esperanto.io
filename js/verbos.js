@@ -231,12 +231,11 @@ const contenedor = document.querySelector("#headerPrincipal");
 contenedor.appendChild(container);
 var Infinitivo;
 var entradaVerbo = botonInput.value;
-function tiempoInfinitivo() {
+function tiempoInfinitivo(entradaVerbo) {
    entradaVerbo = botonInput.value;
   if (verbosArray[entradaVerbo]) {
     console.log(verbosArray[entradaVerbo]);
     botonSpace.innerHTML = verbosArray[entradaVerbo];
-    //   console.log("text : "+verbosArray[entradaVerbo])
     Infinitivo = verbosArray[entradaVerbo].slice(0, -1);
     return Infinitivo;
   }
@@ -258,8 +257,8 @@ function tiempoFuturo() {
   // let verboPasado = Infinitivo.concat("os");
   // console.log("verbo : " + verboPasado);
   botonSpace.innerHTML = botonInput.value;
+//  botonSpace.innerHTML = verboPasado;
 }
-
 botonClick.onclick = tiempoInfinitivo;
 pasado.onclick = tiempoPasado;
 presente.onclick = tiempoPresente;
