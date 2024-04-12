@@ -76,7 +76,7 @@ aprender: "lerni",
   nadar: "naĝi",
   responder: "respondi",
   hacer: "fari",
-  oír: "aŭdi",
+  oir: "aŭdi",
   observar: "rigardi",
   saludar: "saluti",
   agradecer: " danki",
@@ -231,24 +231,24 @@ fieldset.appendChild(legendFinal);
 const contenedor = document.querySelector("#headerPrincipal");
 contenedor.appendChild(container);
 var Infinitivo;
-var entradaVerbo = botonInput.value;
+//var entradaVerbo = botonInput.value;
 function tiempoInfinitivo(entradaVerbo) {
    entradaVerbo = botonInput.value;
   if (verbosArray[entradaVerbo]) {
-    console.log(verbosArray[entradaVerbo]);
+    //console.log(verbosArray[entradaVerbo]);
     botonSpace.innerHTML = verbosArray[entradaVerbo];
-    Infinitivo = verbosArray[entradaVerbo].slice(0, -1);
-    return Infinitivo;
+//    Infinitivo = verbosArray[entradaVerbo].slice(0, -1);
+  //  return Infinitivo;
   }
   // verboU=botonSpace.innerText
   botonInput.focus();
   botonInput.value = "";
 }
-function tiempoPasado() {
-  let verboPasado = Infinitivo.concat("is");
-  console.log("verbo : " + verboPasado);
-  botonSpace.innerHTML = verboPasado;
-}
+// function tiempoPasado() {
+//   let verboPasado = Infinitivo.concat("is");
+//   console.log("verbo : " + verboPasado);
+//   botonSpace.innerHTML = verboPasado;
+// }
 function tiempoPresente() {
   // let verboPasado = Infinitivo.concat("as");
   // console.log("verbo : " + verboPasado);
@@ -262,6 +262,6 @@ function tiempoFuturo() {
 //  botonSpace.innerHTML = verboPasado;
 }
 botonClick.onclick = tiempoInfinitivo;
-pasado.onclick = tiempoPasado;
+//pasado.onclick = tiempoPasado;
 presente.onclick = tiempoPresente;
 futuro.onclick = tiempoFuturo;
