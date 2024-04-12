@@ -233,7 +233,7 @@ function tiempoInfinitivo() {
   let entradaVerbo = botonInput.value;
   if (verbosArray[entradaVerbo]) {
     console.log(verbosArray[entradaVerbo]);
-    botonSpace.innerText = verbosArray[entradaVerbo];
+    botonSpace.innerHTML = verbosArray[entradaVerbo];
     //   console.log("text : "+verbosArray[entradaVerbo])
     Infinitivo = verbosArray[entradaVerbo].slice(0, -1);
     return Infinitivo;
