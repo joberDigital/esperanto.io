@@ -228,9 +228,9 @@ fieldset.appendChild(legendFinal);
 const contenedor = document.querySelector("#headerPrincipal");
 contenedor.appendChild(container);
 var Infinitivo;
-
+var entradaVerbo = botonInput.value;
 function tiempoInfinitivo() {
-  let entradaVerbo = botonInput.value;
+   entradaVerbo = botonInput.value;
   if (verbosArray[entradaVerbo]) {
     console.log(verbosArray[entradaVerbo]);
     botonSpace.innerHTML = verbosArray[entradaVerbo];
