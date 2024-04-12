@@ -249,14 +249,16 @@ function tiempoPasado() {
   botonSpace.innerHTML = verboPasado;
 }
 function tiempoPresente() {
-  let verboPasado = Infinitivo.concat("as");
-  console.log("verbo : " + verboPasado);
-  botonSpace.innerHTML = verboPasado;
+  // let verboPasado = Infinitivo.concat("as");
+  // console.log("verbo : " + verboPasado);
+  botonSpace.innerHTML = verbosArray.ver;
+  //verboPasado;
 }
 function tiempoFuturo() {
   // let verboPasado = Infinitivo.concat("os");
   // console.log("verbo : " + verboPasado);
-  botonSpace.innerHTML = botonInput.value;
+  botonSpace.innerHTML = verbosArray["tocar un instrumento"]
+  //verbosArray.ver;
 //  botonSpace.innerHTML = verboPasado;
 }
 botonClick.onclick = tiempoInfinitivo;
